@@ -59,6 +59,7 @@ h1{
 .input-area > h2 {
     text-align: center;
     color: #4047f0;
+    margin: 5px auto;
 }
 
 form {
