@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>ID Card Generator</h1>
+        </div>
+        <div class="block">
+            <div class="input-area">
+                <h2>Enter Student Details</h2>
+                <form action="#">
+                    <label for="name">Enter Name:</label>
+                    <input type="text" style="font-family: FontAwesome;" id="name" placeholder="&#xf007 Enter Name">
+
+                    <label for="college">Enter College Name:</label>
+                    <input type="text" style="font-family: FontAwesome;" id="college" placeholder="&#xf19c College Name">
+
+                    <label for="location">Location:</label>
+                    <input type="text" style="font-family: FontAwesome;" id="location" placeholder="&#xf2b9 Enter Address">
+
+                    <label for="selectImage">Enter Student's picture:</label>
+                    <input id="selectImage" type="file" accept="image/*" onchange="loadFile(event)">
+                    <img id="inputImage" src="#"  alt="selected image">
+
+                    <button class="generate-btn" onclick="displayCard()">Generate Card</button>
+                </form>
+            </div>
+
+            <div class="output-area">
+                <div class="card">
+                    <div class="imgPrev">
+                        <img src="" alt="student image" id="outputImage">
+                    </div>
+                    <div class="inputTxt"> 
+                        <p>Name: <span id="displayName"></span></p>
+                        <p>College: <span id="displayCollege"></span></p>
+                        <p>Location: <span id="displayLocation"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
